@@ -26,11 +26,9 @@ export default function Home() {
     setSubmitStatus('');
 
     try {
-      // Using EmailJS to send the email
       const emailjs = (await import('@emailjs/browser')).default;
       
-      // Initialize EmailJS (you'll need to get these from EmailJS dashboard)
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      emailjs.init("YOUR_PUBLIC_KEY");
       
       const templateParams = {
         from_name: formData.name,
@@ -40,8 +38,8 @@ export default function Home() {
       };
 
       await emailjs.send(
-        'service_kxm8bju', // Your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_kxm8bju',
+        'YOUR_TEMPLATE_ID',
         templateParams
       );
 
@@ -57,7 +55,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation Header */}
       <header className="px-8 py-6">
         <nav className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -89,10 +86,8 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero Section */}
       <section id="home" className="px-8 py-16">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Profile Picture */}
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gray-200">
         <Image
@@ -105,12 +100,10 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Greeting */}
           <div className="mb-6">
-            <h2 className="text-xl text-gray-700 mb-2">Hi! I&apos;m Caroline Varner 👋</h2>
+            <h2 className="text-xl text-gray-700 mb-2">Hi! I&apos;m Caroline Varner</h2>
           </div>
           
-          {/* Main Title */}
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-serif text-gray-900 leading-tight">
               software engineering student<br />
@@ -118,14 +111,12 @@ export default function Home() {
             </h1>
           </div>
           
-          {/* Description */}
           <div className="mb-12 max-w-2xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed">
               I am a Software Engineering student at Kennesaw State University with an Interactive Design minor. Graduating December 2025, I&apos;m seeking a full-time position to gain experience in the field and contribute to innovative projects.
             </p>
           </div>
           
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#contact" className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors flex items-center space-x-2">
               <span>connect with me</span>
@@ -143,7 +134,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="px-8 py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -152,7 +142,6 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Profile Image */}
             <div className="flex justify-center">
               <div className="w-80 h-96 rounded-2xl overflow-hidden bg-gray-200">
             <Image
@@ -165,13 +154,11 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Content */}
             <div className="space-y-8">
               <p className="text-lg text-gray-700 leading-relaxed">
                 I am a passionate Software Engineering student at Kennesaw State University with an Interactive Design minor. My journey combines technical programming skills with creative design thinking, preparing me to build user-centered applications that bridge the gap between functionality and aesthetics.
               </p>
               
-              {/* Information Cards */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                   <div className="text-center">
@@ -215,7 +202,6 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Tools Section */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Tools i use</h3>
                 <div className="flex space-x-4">
@@ -241,7 +227,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
       <section id="services" className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -308,7 +293,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
       <section id="work" className="px-8 py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -397,7 +381,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="px-8 py-20">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-gray-500 text-sm mb-2">Connect with me</p>
@@ -437,7 +420,6 @@ export default function Home() {
               className="w-full px-4 py-3 border-2 border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-600 resize-none"
             ></textarea>
             
-            {/* Status Messages */}
             {submitStatus === 'success' && (
               <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
                 Thank you! Your message has been sent successfully. I&apos;ll get back to you soon!
