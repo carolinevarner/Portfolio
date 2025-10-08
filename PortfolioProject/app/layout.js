@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "My modern portfolio website",
+  title: "Caroline Varner - Software Engineering Student",
+  description: "Portfolio of Caroline Varner, Software Engineering student at Kennesaw State University with Interactive Design minor. Seeking full-time opportunities.",
 };
 
 export default function RootLayout({ children }) {

@@ -1,13 +1,67 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      // Using EmailJS to send the email
+      const emailjs = (await import('@emailjs/browser')).default;
+      
+      // Initialize EmailJS (you'll need to get these from EmailJS dashboard)
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'carolinevarner04@gmail.com'
+      };
+
+      await emailjs.send(
+        'service_kxm8bju', // Your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        templateParams
+      );
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Header */}
       <header className="px-8 py-6">
         <nav className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-gray-900">William.</span>
+            <span className="text-2xl font-bold text-gray-900">Caroline.</span>
             <div className="w-2 h-2 bg-red-500 rounded-full"></div>
           </div>
           
@@ -25,12 +79,12 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
               </svg>
             </button>
-            <button className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors flex items-center space-x-2">
+            <a href="#contact" className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors flex items-center space-x-2">
               <span>Connect</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-            </button>
+            </a>
           </div>
         </nav>
       </header>
@@ -40,45 +94,51 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           {/* Profile Picture */}
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gray-200 flex items-center justify-center">
-              <span className="text-4xl">👤</span>
+            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gray-200">
+        <Image
+                src="/images/headshot2.jpg"
+                alt="Caroline Varner"
+                width={128}
+                height={128}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
           {/* Greeting */}
           <div className="mb-6">
-            <h2 className="text-xl text-gray-700 mb-2">Hi! I'm William Mark 👋</h2>
+            <h2 className="text-xl text-gray-700 mb-2">Hi! I&apos;m Caroline Varner 👋</h2>
           </div>
           
           {/* Main Title */}
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-serif text-gray-900 leading-tight">
-              frontend web developer<br />
-              <span className="text-gray-600">based in london.</span>
+              software engineering student<br />
+              <span className="text-gray-600">based in kennesaw, georgia.</span>
             </h1>
           </div>
           
           {/* Description */}
           <div className="mb-12 max-w-2xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed">
-              I am a frontend developer from California, USA with 10 years of experience in multiple companies like Microsoft, Tesla and Apple.
+              I am a Software Engineering student at Kennesaw State University with an Interactive Design minor. Graduating December 2025, I&apos;m seeking a full-time position to gain experience in the field and contribute to innovative projects.
             </p>
           </div>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors flex items-center space-x-2">
+            <a href="#contact" className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors flex items-center space-x-2">
               <span>connect with me</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors flex items-center space-x-2">
+            </a>
+            <a href="/CV_Resume.pdf" download="Caroline_Varner_Resume.pdf" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors flex items-center space-x-2">
               <span>my resume</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -94,15 +154,21 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Profile Image */}
             <div className="flex justify-center">
-              <div className="w-80 h-96 rounded-2xl bg-gray-200 flex items-center justify-center">
-                <span className="text-6xl">👨‍💻</span>
+              <div className="w-80 h-96 rounded-2xl overflow-hidden bg-gray-200">
+            <Image
+                  src="/images/headshot2.jpg"
+                  alt="Caroline Varner"
+                  width={320}
+                  height={384}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
             {/* Content */}
             <div className="space-y-8">
               <p className="text-lg text-gray-700 leading-relaxed">
-                I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.
+                I am a passionate Software Engineering student at Kennesaw State University with an Interactive Design minor. My journey combines technical programming skills with creative design thinking, preparing me to build user-centered applications that bridge the gap between functionality and aesthetics.
               </p>
               
               {/* Information Cards */}
@@ -114,8 +180,9 @@ export default function Home() {
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Languages</h3>
                     <div className="text-sm text-gray-600 space-y-1">
+                      <div>Java, Python, C++</div>
                       <div>HTML, CSS, JavaScript</div>
-                      <div>React Js, Next Js</div>
+                      <div>React, Next.js</div>
                     </div>
                   </div>
                 </div>
@@ -127,7 +194,9 @@ export default function Home() {
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Education</h3>
                     <div className="text-sm text-gray-600">
-                      B.Tech in Computer Science
+                      BS in Software Engineering<br />
+                      Interactive Design Minor<br />
+                      Kennesaw State University
                     </div>
                   </div>
                 </div>
@@ -139,7 +208,8 @@ export default function Home() {
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Projects</h3>
                     <div className="text-sm text-gray-600">
-                      Built more than 5 projects
+                      Academic & Personal Projects<br />
+                      Graduating Dec 2025
                     </div>
                   </div>
                 </div>
@@ -178,7 +248,7 @@ export default function Home() {
             <p className="text-gray-500 text-sm mb-2">What i offers</p>
             <h2 className="text-4xl font-serif text-gray-900 mb-6">My services</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              I am a frontend developer from California, USA with 10 years of experience in multiple companies like Microsoft, Tesla and Apple.
+              As a Software Engineering student with an Interactive Design minor, I bring a unique blend of technical programming skills and creative design thinking to every project.
             </p>
           </div>
           
@@ -187,9 +257,9 @@ export default function Home() {
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white">🌐</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Web design</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Web Development</h3>
               <p className="text-gray-600 mb-4">
-                Web development is the process of building, programming...
+                Creating responsive and interactive websites using modern frameworks like React and Next.js with a focus on user experience.
               </p>
               <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
                 Read more →
@@ -198,11 +268,11 @@ export default function Home() {
             
             <div className="bg-pink-50 p-6 rounded-xl shadow-md border border-pink-100">
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white">📱</span>
+                <span className="text-white">💻</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Mobile app</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Software Engineering</h3>
               <p className="text-gray-600 mb-4">
-                Web development is the process of building, programming...
+                Developing robust applications using Java, Python, and C++ with strong problem-solving and algorithmic thinking skills.
               </p>
               <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
                 Read more →
@@ -213,9 +283,9 @@ export default function Home() {
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white">🎨</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">UI/UX design</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Interactive Design</h3>
               <p className="text-gray-600 mb-4">
-                Web development is the process of building, programming...
+                Combining technical skills with creative design principles to create intuitive and engaging user interfaces and experiences.
               </p>
               <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
                 Read more →
@@ -224,11 +294,11 @@ export default function Home() {
             
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white">🖼️</span>
+                <span className="text-white">🔧</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Graphics design</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Problem Solving</h3>
               <p className="text-gray-600 mb-4">
-                Web development is the process of building, programming...
+                Applying analytical thinking and technical knowledge to solve complex programming challenges and create efficient solutions.
               </p>
               <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
                 Read more →
@@ -333,45 +403,71 @@ export default function Home() {
           <p className="text-gray-500 text-sm mb-2">Connect with me</p>
           <h2 className="text-4xl font-serif text-gray-900 mb-6">Get in touch</h2>
           <p className="text-lg text-gray-600 mb-12">
-            I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.
+            I&apos;d love to hear from you! If you have any questions, comments or feedback, please use the form below.
           </p>
           
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
               <input 
                 type="text" 
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
                 placeholder="Enter your name" 
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                required
+                className="w-full px-4 py-3 border-2 border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-600"
               />
               <input 
                 type="email" 
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 placeholder="Enter your email" 
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                required
+                className="w-full px-4 py-3 border-2 border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-600"
               />
             </div>
             <textarea 
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
               placeholder="Enter your message" 
               rows={4}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+              required
+              className="w-full px-4 py-3 border-2 border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-600 resize-none"
             ></textarea>
+            
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
+                Thank you! Your message has been sent successfully. I&apos;ll get back to you soon!
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
+                Sorry, there was an error sending your message. Please try again or email me directly at carolinevarner04@gmail.com
+              </div>
+            )}
+            
             <button 
               type="submit"
-              className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors flex items-center space-x-2 mx-auto"
+              disabled={isSubmitting}
+              className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors flex items-center space-x-2 mx-auto disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>Submit now →</span>
+              <span>{isSubmitting ? 'Sending...' : 'Submit now →'}</span>
             </button>
           </form>
           
           <div className="mt-16 pt-8 border-t border-gray-200">
             <div className="flex items-center justify-center space-x-2 mb-2">
-              <span className="text-xl font-bold text-gray-900">William.</span>
+              <span className="text-xl font-bold text-gray-900">Caroline.</span>
               <div className="w-2 h-2 bg-red-500 rounded-full"></div>
             </div>
             <div className="flex items-center justify-center space-x-2 text-gray-600">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span>greatstackdev@gmail.com</span>
+              <span>caroline.varner@students.kennesaw.edu</span>
             </div>
           </div>
         </div>
