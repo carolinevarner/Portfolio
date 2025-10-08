@@ -188,7 +188,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .connect-button-outline:hover {
