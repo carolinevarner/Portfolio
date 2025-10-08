@@ -55,35 +55,37 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="px-8 py-6">
-        <nav className="max-w-6xl mx-auto flex items-center justify-between">
+      <header className="px-8 py-4">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-gray-900">Caroline.</span>
             <div className="w-2 h-2 bg-red-500 rounded-full"></div>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-gray-900 transition-colors">Home</a>
-            <a href="#about" className="text-gray-700 hover:text-gray-900 transition-colors">About me</a>
-            <a href="#services" className="text-gray-700 hover:text-gray-900 transition-colors">Services</a>
-            <a href="#work" className="text-gray-700 hover:text-gray-900 transition-colors">My work</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-gray-900 transition-colors">Testimonials</a>
-          </div>
+          <nav className="navigation-pill">
+            <div className="flex items-center space-x-8">
+              <a href="#home" className="navigation-link">Home</a>
+              <a href="#about" className="navigation-link">About me</a>
+              <a href="#services" className="navigation-link">Services</a>
+              <a href="#work" className="navigation-link">My work</a>
+              <a href="#testimonials" className="navigation-link">Testimonials</a>
+            </div>
+          </nav>
           
           <div className="flex items-center space-x-4">
-            <button className="p-2 text-gray-700 hover:text-gray-900 transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            <button className="moon-icon">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
               </svg>
             </button>
-            <a href="#contact" className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors flex items-center space-x-2">
+            <a href="#contact" className="connect-button-outline">
               <span>Connect</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
           </div>
-        </nav>
+        </div>
       </header>
 
       <section id="home" className="px-8 py-16">
@@ -101,30 +103,30 @@ export default function Home() {
           </div>
           
           <div className="mb-6">
-            <h2 className="text-xl text-gray-700 mb-2">Hi! I&apos;m Caroline Varner</h2>
+            <h2 className="greeting-text">Hi! I&apos;m Caroline Varner 👋🏻</h2>
           </div>
           
           <div className="mb-8">
-            <h1 className="text-5xl md:text-6xl font-serif text-gray-900 leading-tight">
+            <h1 className="main-title">
               software engineering student<br />
-              <span className="text-gray-600">based in kennesaw, georgia.</span>
+              based in atlanta, georgia.
             </h1>
           </div>
           
           <div className="mb-12 max-w-2xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="hero-description">
               I am a Software Engineering student at Kennesaw State University with an Interactive Design minor. Graduating December 2025, I&apos;m seeking a full-time position to gain experience in the field and contribute to innovative projects.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#contact" className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors flex items-center space-x-2">
+            <a href="#contact" className="cta-button-primary">
               <span>connect with me</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </a>
-            <a href="/CV_Resume.pdf" download="Caroline_Varner_Resume.pdf" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors flex items-center space-x-2">
+            <a href="/CV_Resume.pdf" download="Caroline_Varner_Resume.pdf" className="cta-button-secondary">
               <span>my resume</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -160,13 +162,13 @@ export default function Home() {
               </p>
               
               <div className="grid grid-cols-3 gap-4">
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                       <span className="text-white font-bold">&lt;/&gt;</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Languages</h3>
-                    <div className="text-sm text-gray-600 space-y-1">
+                    <div className="text-sm text-gray-900 space-y-1">
                       <div>Java, Python, C++</div>
                       <div>HTML, CSS, JavaScript</div>
                       <div>React, Next.js</div>
@@ -174,13 +176,13 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                       <span className="text-white">🎓</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Education</h3>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-900">
                       BS in Software Engineering<br />
                       Interactive Design Minor<br />
                       Kennesaw State University
@@ -188,13 +190,13 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                       <span className="text-white">💼</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Projects</h3>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-900">
                       Academic & Personal Projects<br />
                       Graduating Dec 2025
                     </div>
@@ -232,18 +234,18 @@ export default function Home() {
           <div className="text-center mb-16">
             <p className="text-gray-500 text-sm mb-2">What i offers</p>
             <h2 className="text-4xl font-serif text-gray-900 mb-6">My services</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-800 max-w-2xl mx-auto">
               As a Software Engineering student with an Interactive Design minor, I bring a unique blend of technical programming skills and creative design thinking to every project.
             </p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white">🌐</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Web Development</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 Creating responsive and interactive websites using modern frameworks like React and Next.js with a focus on user experience.
               </p>
               <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
@@ -251,12 +253,12 @@ export default function Home() {
               </a>
             </div>
             
-            <div className="bg-pink-50 p-6 rounded-xl shadow-md border border-pink-100">
+            <div className="bg-pink-50 p-6 rounded-xl shadow-lg border border-pink-200 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white">💻</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Software Engineering</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 Developing robust applications using Java, Python, and C++ with strong problem-solving and algorithmic thinking skills.
               </p>
               <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
@@ -264,12 +266,12 @@ export default function Home() {
               </a>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white">🎨</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Interactive Design</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 Combining technical skills with creative design principles to create intuitive and engaging user interfaces and experiences.
               </p>
               <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
@@ -277,12 +279,12 @@ export default function Home() {
               </a>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white">🔧</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Problem Solving</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 Applying analytical thinking and technical knowledge to solve complex programming challenges and create efficient solutions.
               </p>
               <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
@@ -298,13 +300,13 @@ export default function Home() {
           <div className="text-center mb-16">
             <p className="text-gray-500 text-sm mb-2">My portfolio</p>
             <h2 className="text-4xl font-serif text-gray-900 mb-6">My latest work</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-800 max-w-2xl mx-auto">
               Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                 <span className="text-6xl">📱</span>
               </div>
@@ -317,11 +319,11 @@ export default function Home() {
                   </button>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-1">Frontend Project</h3>
-                <p className="text-gray-600">web design</p>
+                <p className="text-gray-800">web design</p>
               </div>
             </div>
             
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div className="h-64 bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
                 <span className="text-6xl">🗺️</span>
               </div>
@@ -334,11 +336,11 @@ export default function Home() {
                   </button>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-1">Geo Based App</h3>
-                <p className="text-gray-600">mobile app</p>
+                <p className="text-gray-800">mobile app</p>
               </div>
             </div>
             
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div className="h-64 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
                 <span className="text-6xl">📷</span>
               </div>
@@ -351,11 +353,11 @@ export default function Home() {
                   </button>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-1">Photography Site</h3>
-                <p className="text-gray-600">web design</p>
+                <p className="text-gray-800">web design</p>
               </div>
             </div>
             
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div className="h-64 bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center">
                 <span className="text-6xl">⌨️</span>
               </div>
@@ -368,13 +370,13 @@ export default function Home() {
                   </button>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-1">UI/UX Designing</h3>
-                <p className="text-gray-600">ui/ux design</p>
+                <p className="text-gray-800">ui/ux design</p>
               </div>
             </div>
           </div>
           
           <div className="text-center">
-            <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center space-x-2 mx-auto">
+            <button className="border border-gray-300 text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center space-x-2 mx-auto shadow-md">
               <span>Show more →</span>
             </button>
           </div>
@@ -385,7 +387,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-gray-500 text-sm mb-2">Connect with me</p>
           <h2 className="text-4xl font-serif text-gray-900 mb-6">Get in touch</h2>
-          <p className="text-lg text-gray-600 mb-12">
+          <p className="text-lg text-gray-800 mb-12">
             I&apos;d love to hear from you! If you have any questions, comments or feedback, please use the form below.
           </p>
           
@@ -434,7 +436,7 @@ export default function Home() {
             <button 
               type="submit"
               disabled={isSubmitting}
-              className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors flex items-center space-x-2 mx-auto disabled:opacity-50 disabled:cursor-not-allowed"
+              className="submit-button"
             >
               <span>{isSubmitting ? 'Sending...' : 'Submit now →'}</span>
             </button>
@@ -445,7 +447,7 @@ export default function Home() {
               <span className="text-xl font-bold text-gray-900">Caroline.</span>
               <div className="w-2 h-2 bg-red-500 rounded-full"></div>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-gray-600">
+            <div className="flex items-center justify-center space-x-2 text-gray-800">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
