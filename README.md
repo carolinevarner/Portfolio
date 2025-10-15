@@ -1,19 +1,44 @@
-# Welcome to my portfolio! 
+# Caroline Varner - Portfolio Website
 
-A modern and responsive developer portfolio website built with Next JS, React and Tailwind CSS. This project showcases personal information, work experience, technical skills, and projects in a clean, interactive design.
+A modern portfolio website showcasing my work as a Software Engineering student at Kennesaw State University with an Interactive Design minor.
 
-## 🚀 Project Status
+## 🚀 Live Website
 
-🚧 **In Progress** — This project is currently under development. Features and layout may change as work continues.
+**🔗 [View Live Site](https://cvportfolio-steel.vercel.app/)**
 
----
+> ⚠️ **Note**: This project is currently under construction! You can watch my progress as I continue to develop and refine the portfolio.
 
 ## 🛠️ Tech Stack
 
-- **React** – Component-based JavaScript library for building UI
-- **Tailwind CSS** – Utility-first CSS framework for fast styling
-- **Vite** – Lightning-fast development environment
-- **TypeScript** (optional) – Add type safety if functionality is expand
-- **Framer Motion** – Smooth and elegant animations 
-- **Heroicons / React Icons** – For scalable vector icons
+- **Framework**: [Next.js](https://nextjs.org) 15.3.4 (App Router)
+- **Frontend**: React 19.0.0
+- **Styling**: Tailwind CSS v4
+- **Fonts**: Google Fonts (Ovo)
+- **Deployment**: Vercel
+- **Email Service**: EmailJS
 
+## 📋 Features
+
+- Responsive design optimized for all devices
+- Modern UI with smooth animations and transitions
+- Contact form with email integration
+- Resume download functionality
+- Clean, professional layout showcasing skills and projects
+
+---
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
