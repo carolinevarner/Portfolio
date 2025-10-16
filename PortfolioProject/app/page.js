@@ -228,11 +228,11 @@ export default function Home() {
             
             <div className="space-y-6">
               <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                Originally from Savannah, Georgia, I'm a passionate Software Engineering student at Kennesaw State University with an Interactive Design minor. When I'm not coding, you'll find me hiking through Georgia's beautiful trails, creating art, catching live music at concerts, or hanging out with friends. I believe that the best solutions come from combining creativity with innovative code.
+                Originally from Savannah, Georgia, I&apos;m a passionate Software Engineering student at Kennesaw State University with an Interactive Design minor. When I&apos;m not coding, you&apos;ll find me hiking through Georgia&apos;s beautiful trails, creating art, catching live music at concerts, or hanging out with friends. I believe that the best solutions come from combining creativity with innovative code.
               </p>
               
               <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                I always strive for innovation, collaboration, and writing good clean code. My approach to problem-solving blends technical expertise with creative thinking, allowing me to find unique solutions to complex challenges. I'm incredibly hardworking and love the process of turning ideas into reality through code. Whether it's building user-centered applications or exploring new technologies, I'm always excited to learn and grow in this ever-evolving field.
+                I always strive for innovation, collaboration, and writing good clean code. My approach to problem-solving blends technical expertise with creative thinking, allowing me to find unique solutions to complex challenges. I&apos;m incredibly hardworking and love the process of turning ideas into reality through code. Whether it&apos;s building user-centered applications or exploring new technologies, I&apos;m always excited to learn and grow in this ever-evolving field.
               </p>
             </div>
           </div>
