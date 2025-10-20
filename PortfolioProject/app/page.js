@@ -253,7 +253,7 @@ export default function Home() {
             <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>What I offer</p>
             <h2 className={`text-4xl font-serif mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Skills & Technologies</h2>
             <p className={`text-lg max-w-4xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-            I strive to blend technical problem-solving with creative design thinking in everything I build. Throughout my time at Kennesaw State University, I've explored a variety of programming languages, frameworks, and tools—always pushing myself to learn something new. I enjoy experimenting with different technologies to better understand how great software is built, both in function and in user experience.            </p>
+            I strive to blend technical problem-solving with creative design thinking in everything I build. Throughout my time at Kennesaw State University, I&apos;ve explored a variety of programming languages, frameworks, and tools—always pushing myself to learn something new. I enjoy experimenting with different technologies to better understand how great software is built, both in function and in user experience.            </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -398,7 +398,7 @@ export default function Home() {
             <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>My projects</p>
             <h2 className={`text-4xl font-serif mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>My latest work</h2>
             <p className={`text-lg max-w-4xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-            Welcome to my software engineering portfolio! Here, you'll find a collection of projects that highlight my experience in building solutions across different areas of development—from system design and backend logic to problem-solving and creative technical implementation.            </p>
+            Welcome to my software engineering portfolio! Here, you&apos;ll find a collection of projects that highlight my experience in building solutions across different areas of development—from system design and backend logic to problem-solving and creative technical implementation.            </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
