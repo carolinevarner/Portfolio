@@ -152,13 +152,17 @@ export default function Home() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#contact" className="cta-button-primary">
-              <span>connect with me</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <a href="https://github.com/carolinevarner" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-200">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </a>
-            <a href="/CarolineVarner_Resume.pdf" target="_blank" rel="noopener noreferrer" className="cta-button-secondary">
+            <a href="https://www.linkedin.com/in/caroline-varner/" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-200">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="/CarolineVarner_Resume.pdf" target="_blank" rel="noopener noreferrer" className="border-1 border-black text-black px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-200">
               <span>my resume</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -228,12 +232,16 @@ export default function Home() {
             
             <div className="space-y-6">
               <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                Originally from Savannah, Georgia, I&apos;m a passionate Software Engineering student at Kennesaw State University with an Interactive Design minor. When I&apos;m not coding, you&apos;ll find me hiking through Georgia&apos;s beautiful trails, creating art, catching live music at concerts, or hanging out with friends. I believe that the best solutions come from combining creativity with innovative code.
+                {/* Originally from Savannah, Georgia, I&apos;m a passionate Software Engineering student at Kennesaw State University with an Interactive Design minor. When I&apos;m not coding, you&apos;ll find me hiking through Georgia&apos;s beautiful trails, creating art, catching live music at concerts, or hanging out with friends. I believe that the best solutions come from combining creativity with innovative code. */}
+                I’m a Software Engineering student at Kennesaw State University, also pursuing a minor in Interactive Design. Originally from Savannah, Georgia, I’ve always been drawn to the intersection of creativity and technology—whether I’m writing code, designing user-focused solutions, or sketching new ideas.
+                When I’m not working on projects, you can usually find me hiking Georgia’s trails, making art, enjoying live music, or spending time with friends.                
+                <br></br>
+                <br></br>
+                {/* When I’m not working on projects, you can usually find me hiking Georgia’s trails, making art, enjoying live music, or spending time with friends. */}
+                I believe great software comes from both innovation and collaboration, and I’m passionate about building things that are not only functional but meaningful.
+                I enjoy solving complex problems with clean, thoughtful code and a creative mindset. Whether it’s developing user-centered applications or exploring new technologies, I’m always eager to learn, grow, and turn ideas into something real.              
               </p>
               
-              <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                I always strive for innovation, collaboration, and writing good clean code. My approach to problem-solving blends technical expertise with creative thinking, allowing me to find unique solutions to complex challenges. I&apos;m incredibly hardworking and love the process of turning ideas into reality through code. Whether it&apos;s building user-centered applications or exploring new technologies, I&apos;m always excited to learn and grow in this ever-evolving field.
-              </p>
             </div>
           </div>
         </div>
@@ -244,62 +252,141 @@ export default function Home() {
           <div className="text-center mb-16">
             <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>What I offer</p>
             <h2 className={`text-4xl font-serif mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Skills & Technologies</h2>
-            <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
-              As a Software Engineering student with an Interactive Design minor, I bring a unique blend of technical programming skills and creative design thinking to every project.
-            </p>
+            <p className={`text-lg max-w-4xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            I strive to blend technical problem-solving with creative design thinking in everything I build. Throughout my time at Kennesaw State University, I've explored a variety of programming languages, frameworks, and tools—always pushing myself to learn something new. I enjoy experimenting with different technologies to better understand how great software is built, both in function and in user experience.            </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Programming Languages */}
             <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
-              <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white">🌐</span>
+              <h3 className={`text-xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                Programming Languages
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">☕</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Java</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🎯</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>C#</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">⚙️</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>C++</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🐍</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Python</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🔷</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>TypeScript</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🗄️</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>SQL</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🌐</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>HTML/CSS</span>
+                </div>
               </div>
-              <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Web Development</h3>
-              <p className={`mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
-                Creating responsive and interactive websites using modern frameworks like React and Next.js with a focus on user experience.
-              </p>
-              <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
-                Read more →
-              </a>
             </div>
             
-            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-pink-900/20 border-pink-800 shadow-white/10' : 'bg-pink-50 border-pink-200'}`}>
-              <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white">💻</span>
+            {/* Developer Tools */}
+            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+              <h3 className={`text-xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                Developer Tools
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">💻</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>VS Code</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🧠</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>IntelliJ</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🐍</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>PyCharm</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">📊</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>MS Office</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🎨</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Adobe CC</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">☁️</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>AWS</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🐙</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>GitHub</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🎭</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Figma</span>
+                </div>
               </div>
-              <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Software Engineering</h3>
-              <p className={`mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
-                Developing robust applications using Java, Python, and C++ with strong problem-solving and algorithmic thinking skills.
-              </p>
-              <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
-                Read more →
-              </a>
             </div>
             
+            {/* Frameworks & Libraries */}
             <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
-              <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white">🎨</span>
+              <h3 className={`text-xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                Frameworks & Libraries
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">⚛️</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>React.js</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">▲</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Next.js</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🟣</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ASP.NET Core</span>
+                </div>
               </div>
-              <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Interactive Design</h3>
-              <p className={`mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
-                Combining technical skills with creative design principles to create intuitive and engaging user interfaces and experiences.
-              </p>
-              <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
-                Read more →
-              </a>
             </div>
             
+            {/* Core Strengths */}
             <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
-              <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white">🔧</span>
+              <h3 className={`text-xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                Core Strengths
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">⚡</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Proficiency</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🤝</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Collaboration</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">🔄</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Adaptability</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">💡</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Innovation</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">💬</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Communication</span>
+                </div>
+                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                  <div className="text-3xl mb-2">📋</div>
+                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Project Management</span>
+                </div>
               </div>
-              <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Problem Solving</h3>
-              <p className={`mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
-                Applying analytical thinking and technical knowledge to solve complex programming challenges and create efficient solutions.
-              </p>
-              <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
-                Read more →
-              </a>
             </div>
           </div>
         </div>
@@ -308,87 +395,116 @@ export default function Home() {
       <section id="work" className={`px-8 py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>My portfolio</p>
+            <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>My projects</p>
             <h2 className={`text-4xl font-serif mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>My latest work</h2>
-            <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
-              Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.
-            </p>
+            <p className={`text-lg max-w-4xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            Welcome to my software engineering portfolio! Here, you'll find a collection of projects that highlight my experience in building solutions across different areas of development—from system design and backend logic to problem-solving and creative technical implementation.            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-700 shadow-white/10' : 'bg-white'}`}>
-              <div className={`h-64 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-blue-900/30 to-purple-900/30' : 'from-blue-100 to-purple-100'}`}>
-                <span className="text-6xl">📱</span>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+              <div className={`h-48 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-blue-900/30 to-purple-900/30' : 'from-blue-100 to-purple-100'}`}>
+                <span className="text-6xl">📊</span>
               </div>
-              <div className="p-6 relative">
-                <div className="absolute bottom-6 right-6">
-                  <button className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${isDarkMode ? 'bg-gray-600 hover:bg-gray-500' : 'bg-gray-200 hover:bg-gray-300'}`}>
-                    <svg className={`w-5 h-5 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                  </button>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>SPM Project Management</h3>
+                <p className={`text-base mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  A comprehensive project management web application built with ASP.NET Core MVC and MongoDB. Features task management, risk tracking, requirements gathering, and team collaboration tools with AWS deployment.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>ASP.NET Core</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>C#</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>MongoDB</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>AWS</span>
                 </div>
-                <h3 className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Frontend Project</h3>
-                <p className={isDarkMode ? 'text-gray-300' : 'text-gray-800'}>web design</p>
+                <div className="flex gap-3 mt-auto">
+                  <a href="https://github.com/carolinevarner/SPM-project" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-800 flex-1">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=alnv505AxKQ&t=7s" target="_blank" rel="noopener noreferrer" className={`border px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-200 flex-1 ${isDarkMode ? 'border-gray-600 text-white hover:bg-gray-700' : 'border-gray-300 text-gray-900 hover:bg-gray-50'}`}>
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    Video Demo
+                  </a>
+                </div>
               </div>
             </div>
             
-            <div className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-700 shadow-white/10' : 'bg-white'}`}>
-              <div className={`h-64 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-green-900/30 to-blue-900/30' : 'from-green-100 to-blue-100'}`}>
-                <span className="text-6xl">🗺️</span>
+            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+              <div className={`h-48 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-green-900/30 to-blue-900/30' : 'from-green-100 to-blue-100'}`}>
+                <span className="text-6xl">💰</span>
               </div>
-              <div className="p-6 relative">
-                <div className="absolute bottom-6 right-6">
-                  <button className="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                  </button>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>FlowCounts</h3>
+                <p className={`text-base mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  A web-based accounting system with role-based access control, chart of accounts management, ledgers, financial ratios, and comprehensive event logging for business financial tracking.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Django</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>React</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Python</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>JavaScript</span>
                 </div>
-                <h3 className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Geo Based App</h3>
-                <p className={isDarkMode ? 'text-gray-300' : 'text-gray-800'}>mobile app</p>
+                <a href="https://github.com/carolinevarner/FlowCounts" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-800 mt-auto">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  GitHub
+                </a>
               </div>
             </div>
             
-            <div className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-700 shadow-white/10' : 'bg-white'}`}>
-              <div className={`h-64 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-purple-900/30 to-pink-900/30' : 'from-purple-100 to-pink-100'}`}>
-                <span className="text-6xl">📷</span>
+            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+              <div className={`h-48 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-purple-900/30 to-pink-900/30' : 'from-purple-100 to-pink-100'}`}>
+                <span className="text-6xl">🏪</span>
               </div>
-              <div className="p-6 relative">
-                <div className="absolute bottom-6 right-6">
-                  <button className="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                  </button>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Restaurant Simulation</h3>
+                <p className={`text-base mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  C# implementation of core OS concepts including multi-threading with resource synchronization and IPC using named pipes. Demonstrates thread management, deadlock handling, and inter-process communication mechanisms.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>C#</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Multi-threading</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>IPC</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>.NET</span>
                 </div>
-                <h3 className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Photography Site</h3>
-                <p className={isDarkMode ? 'text-gray-300' : 'text-gray-800'}>web design</p>
+                <a href="https://github.com/carolinevarner/FusionLotus_RestaurantSimulation" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-800 mt-auto">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  GitHub
+                </a>
               </div>
             </div>
             
-            <div className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-700 shadow-white/10' : 'bg-white'}`}>
-              <div className={`h-64 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-yellow-900/30 to-orange-900/30' : 'from-yellow-100 to-orange-100'}`}>
-                <span className="text-6xl">⌨️</span>
+            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+              <div className={`h-48 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-yellow-900/30 to-orange-900/30' : 'from-yellow-100 to-orange-100'}`}>
+                <span className="text-6xl">🤖</span>
               </div>
-              <div className="p-6 relative">
-                <div className="absolute bottom-6 right-6">
-                  <button className="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                  </button>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>AI Threat Modeler</h3>
+                <p className={`text-base mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  An AI-powered security threat modeling application that helps identify and assess potential security vulnerabilities in software systems using machine learning algorithms and security best practices.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>AI/ML</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Python</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Security</span>
+                  <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Threat Modeling</span>
                 </div>
-                <h3 className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>UI/UX Designing</h3>
-                <p className={isDarkMode ? 'text-gray-300' : 'text-gray-800'}>ui/ux design</p>
+                <a href="https://github.com/carolinevarner/ai-threat-modeler" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-800 mt-auto">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  GitHub
+                </a>
               </div>
             </div>
-          </div>
-          
-          <div className="text-center">
-            <button className={`border px-8 py-3 rounded-lg transition-colors flex items-center space-x-2 mx-auto shadow-md ${isDarkMode ? 'border-gray-600 text-white hover:bg-gray-700 shadow-white/10' : 'border-gray-300 text-gray-900 hover:bg-gray-50'}`}>
-              <span>Show more →</span>
-            </button>
           </div>
         </div>
       </section>
