@@ -204,14 +204,14 @@ export default function Home() {
 
       <section id="about" className={`px-4 sm:px-8 py-16 sm:py-20 ${isDarkMode ? '' : 'bg-gray-50'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Introduction</p>
-            <h2 className={`text-4xl font-serif ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About me</h2>
+            <h2 className={`text-3xl sm:text-4xl font-serif ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About me</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center max-w-5xl mx-auto">
             <div className="flex justify-center">
-              <div className="relative w-96 h-[500px] rounded-2xl overflow-hidden bg-gray-200 shadow-2xl">
+              <div className="relative w-80 sm:w-96 h-[400px] sm:h-[500px] rounded-2xl overflow-hidden bg-gray-200 shadow-2xl">
                 <Image
                   src={aboutPhotos[currentPhotoIndex]}
                   alt="Caroline Varner"
@@ -258,8 +258,8 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="space-y-6">
-              <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            <div className="space-y-4 sm:space-y-6 px-4 sm:px-0">
+              <p className={`text-base sm:text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                 {/* Originally from Savannah, Georgia, I&apos;m a passionate Software Engineering student at Kennesaw State University with an Interactive Design minor. When I&apos;m not coding, you&apos;ll find me hiking through Georgia&apos;s beautiful trails, creating art, catching live music at concerts, or hanging out with friends. I believe that the best solutions come from combining creativity with innovative code. */}
                 I’m a Software Engineering student at Kennesaw State University, also pursuing a minor in Interactive Design. Originally from Savannah, Georgia, I’ve always been drawn to the intersection of creativity and technology—whether I’m writing code, designing user-focused solutions, or sketching new ideas.
                 When I’m not working on projects, you can usually find me hiking Georgia’s trails, making art, enjoying live music, or spending time with friends.                
