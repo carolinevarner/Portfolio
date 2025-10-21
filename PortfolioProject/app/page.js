@@ -80,8 +80,8 @@ export default function Home() {
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
-      <header className="px-8 py-4">
+    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'text-white' : 'bg-white text-gray-900'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
+      <header className="px-8 py-4" style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Caroline.</span>
@@ -91,10 +91,11 @@ export default function Home() {
           <nav className="navigation-pill">
             <div className="flex items-center space-x-8">
               <a href="#home" className="navigation-link">Home</a>
-              <a href="#about" className="navigation-link">About me</a>
+              <a href="#about" className="navigation-link">About</a>
               <a href="#services" className="navigation-link">Skills</a>
-              <a href="#work" className="navigation-link">My work</a>
-              <a href="#testimonials" className="navigation-link">Testimonials</a>
+              <a href="#experience" className="navigation-link">Experience</a>
+              <a href="#work" className="navigation-link">Projects</a>
+              <a href="#contact" className="navigation-link">Contact</a>
             </div>
           </nav>
           
@@ -112,15 +113,12 @@ export default function Home() {
             </button>
             <a href="#contact" className="connect-button-outline">
               <span>Connect</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
             </a>
           </div>
         </div>
       </header>
 
-      <section id="home" className="px-8 py-16">
+      <section id="home" className="px-8 py-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <div className="w-40 h-40 mx-auto rounded-full overflow-hidden bg-gray-200">
@@ -152,27 +150,24 @@ export default function Home() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="https://github.com/carolinevarner" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-200">
+            <a href="https://github.com/carolinevarner" target="_blank" rel="noopener noreferrer" className={`header-github-button px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center border ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white hover:bg-white hover:text-black hover:border-black'}`}>
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/caroline-varner/" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-200">
+            <a href="https://www.linkedin.com/in/caroline-varner/" target="_blank" rel="noopener noreferrer" className={`header-linkedin-button px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center border ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white hover:bg-white hover:text-black hover:border-black'}`}>
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
             </a>
-            <a href="/CarolineVarner_Resume.pdf" target="_blank" rel="noopener noreferrer" className="border-1 border-black text-black px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-200">
-              <span>my resume</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+            <a href="/CarolineVarner_Resume.pdf" target="_blank" rel="noopener noreferrer" className={`my-resume-button px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center border ${isDarkMode ? 'border-white text-white' : 'border-black text-black hover:bg-black hover:text-white'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
+              <span>My Resume</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section id="about" className={`px-8 py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+      <section id="about" className={`px-8 py-20 ${isDarkMode ? '' : 'bg-gray-50'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Introduction</p>
@@ -190,7 +185,6 @@ export default function Home() {
                   className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
                 />
                 
-                {/* Photo indicators */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                   {aboutPhotos.map((_, index) => (
                     <button
@@ -205,7 +199,6 @@ export default function Home() {
                   ))}
                 </div>
                 
-                {/* Navigation arrows */}
                 <button
                   onClick={() => setCurrentPhotoIndex(
                     currentPhotoIndex === 0 ? aboutPhotos.length - 1 : currentPhotoIndex - 1
@@ -247,144 +240,140 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className={`px-8 py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+      <section id="services" className={`px-8 py-20 ${isDarkMode ? '' : 'bg-white'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>What I offer</p>
             <h2 className={`text-4xl font-serif mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Skills & Technologies</h2>
             <p className={`text-lg max-w-4xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-            I strive to blend technical problem-solving with creative design thinking in everything I build. Throughout my time at Kennesaw State University, I&apos;ve explored a variety of programming languages, frameworks, and tools—always pushing myself to learn something new. I enjoy experimenting with different technologies to better understand how great software is built, both in function and in user experience.            </p>
+            I strive to blend technical problem-solving with creative design thinking in everything I build. I enjoy experimenting with different technologies to better understand how great software is built, both in function and in user experience.            </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Programming Languages */}
-            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
               <h3 className={`text-xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                 Programming Languages
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">☕</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Java</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Java</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🎯</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>C#</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>C#</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">⚙️</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>C++</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>C++</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🐍</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Python</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Python</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🔷</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>TypeScript</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>TypeScript</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🗄️</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>SQL</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>SQL</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🌐</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>HTML/CSS</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>HTML/CSS</span>
                 </div>
               </div>
             </div>
             
-            {/* Developer Tools */}
-            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
               <h3 className={`text-xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                 Developer Tools
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">💻</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>VS Code</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>VS Code</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🧠</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>IntelliJ</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>IntelliJ</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🐍</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>PyCharm</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>PyCharm</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">📊</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>MS Office</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>MS Office</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🎨</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Adobe CC</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Adobe CC</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">☁️</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>AWS</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>AWS</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🐙</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>GitHub</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>GitHub</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🎭</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Figma</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Figma</span>
                 </div>
               </div>
             </div>
             
-            {/* Frameworks & Libraries */}
-            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
               <h3 className={`text-xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                 Frameworks & Libraries
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">⚛️</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>React.js</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>React.js</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">▲</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Next.js</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Next.js</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🟣</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ASP.NET Core</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>ASP.NET Core</span>
                 </div>
               </div>
             </div>
             
-            {/* Core Strengths */}
-            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
+            <div className={`p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow ${isDarkMode ? 'border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
               <h3 className={`text-xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                 Core Strengths
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">⚡</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Proficiency</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Technical Proficiency</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🤝</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Collaboration</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Collaboration</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">🔄</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Adaptability</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Adaptability</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">💡</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Innovation</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Innovation</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">💬</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Communication</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Communication</span>
                 </div>
-                <div className={`p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                <div className={`p-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
                   <div className="text-3xl mb-2">📋</div>
-                  <span className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Project Management</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--nav-text)' }}>Project Management</span>
                 </div>
               </div>
             </div>
@@ -392,7 +381,144 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className={`px-8 py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+      <section id="experience" className={`px-8 py-20 ${isDarkMode ? '' : 'bg-gray-50'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Professional experience</p>
+            <h2 className={`text-4xl font-serif mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Work Experience</h2>
+            <p className={`text-lg max-w-4xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+              Building expertise through hands-on teaching and mentorship in computer science education.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-1 lg:order-1">
+              <div className="flex justify-center">
+                <div className="relative w-full max-w-lg h-[280px] rounded-2xl overflow-hidden bg-gray-200 shadow-2xl">
+                  <Image
+                    src={currentPhotoIndex === 0 ? "/work_photos/birthday.jpg" : "/work_photos/party.jpg"}
+                    alt={currentPhotoIndex === 0 ? "Work environment - birthday celebration" : "Work environment - team gathering"}
+                    width={384}
+                    height={280}
+                    className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
+                  />
+                  
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <button
+                      onClick={() => setCurrentPhotoIndex(0)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        currentPhotoIndex === 0 
+                          ? 'bg-white shadow-lg' 
+                          : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                    />
+                    <button
+                      onClick={() => setCurrentPhotoIndex(1)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        currentPhotoIndex === 1 
+                          ? 'bg-white shadow-lg' 
+                          : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                    />
+              </div>
+                  
+                  <button
+                    onClick={() => setCurrentPhotoIndex(
+                      currentPhotoIndex === 0 ? 1 : currentPhotoIndex - 1
+                    )}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 rounded-full flex items-center justify-center transition-all duration-300"
+                  >
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  
+                  <button
+                    onClick={() => setCurrentPhotoIndex(
+                      currentPhotoIndex === 1 ? 0 : currentPhotoIndex + 1
+                    )}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 rounded-full flex items-center justify-center transition-all duration-300"
+                  >
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div className="order-2 lg:order-2">
+              <div className="mb-6">
+                <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  Team Lead - Lab Assistant/Tutor
+                </h3>
+                <p className={`text-lg font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  Kennesaw State University
+                </p>
+                <p className={`text-base ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  College of Computing and Software Engineering • Aug 2023 – Present
+                </p>
+              </div>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 rounded-full mt-2 ${isDarkMode ? 'bg-gray-400' : 'bg-gray-600'}`}></div>
+                  <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    Supported <span className="font-semibold">300+ students</span> across multiple programming courses (Java, Python, C#) through lab instruction, debugging, and concept review.
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 rounded-full mt-2 ${isDarkMode ? 'bg-gray-400' : 'bg-gray-600'}`}></div>
+                  <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    Collaborated with faculty to design lab materials and enhance technical communication and peer learning.
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 rounded-full mt-2 ${isDarkMode ? 'bg-gray-400' : 'bg-gray-600'}`}></div>
+                  <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    Assisted with new hire onboarding by conducting technical interviews with management and generating new hire procedure documents.
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 rounded-full mt-2 ${isDarkMode ? 'bg-gray-400' : 'bg-gray-600'}`}></div>
+                  <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    Mentored new assistants by developing a shared GitHub repository with curated code examples for hands-on practice.
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 rounded-full mt-2 ${isDarkMode ? 'bg-gray-400' : 'bg-gray-600'}`}></div>
+                  <p className={`text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    <span className="font-semibold">Employee of the Month (Dec 2024)</span> for leadership, adaptability, and mentoring excellence.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
+                  Leadership
+                </span>
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
+                  Mentoring
+                </span>
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
+                  Technical Training
+                </span>
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
+                  Java
+                </span>
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
+                  Python
+                </span>
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
+                  C#
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" className={`px-8 py-20 ${isDarkMode ? '' : 'bg-gray-50'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>My projects</p>
@@ -402,9 +528,9 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
-              <div className={`h-48 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-blue-900/30 to-purple-900/30' : 'from-blue-100 to-purple-100'}`}>
-                <span className="text-6xl">📊</span>
+            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
+              <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
+                <img src="/project_photos/manageme.io.png" alt="ManageMe.io Project" className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>SPM Project Management</h3>
@@ -418,13 +544,13 @@ export default function Home() {
                   <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>AWS</span>
                 </div>
                 <div className="flex gap-3 mt-auto">
-                  <a href="https://github.com/carolinevarner/SPM-project" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-800 flex-1">
+                  <a href="https://github.com/carolinevarner/SPM-project" target="_blank" rel="noopener noreferrer" className={`project-github-button px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center flex-1 border ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white hover:bg-white hover:text-black hover:border-black'}`}>
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                     GitHub
                   </a>
-                  <a href="https://www.youtube.com/watch?v=alnv505AxKQ&t=7s" target="_blank" rel="noopener noreferrer" className={`border px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-200 flex-1 ${isDarkMode ? 'border-gray-600 text-white hover:bg-gray-700' : 'border-gray-300 text-gray-900 hover:bg-gray-50'}`}>
+                  <a href="https://www.youtube.com/watch?v=alnv505AxKQ&t=7s" target="_blank" rel="noopener noreferrer" className={`video-demo-button border px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center flex-1 ${isDarkMode ? 'border-gray-600 text-white' : 'border-gray-300 text-gray-900 hover:bg-black hover:text-white hover:border-black'}`}>
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
@@ -434,9 +560,9 @@ export default function Home() {
               </div>
             </div>
             
-            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
-              <div className={`h-48 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-green-900/30 to-blue-900/30' : 'from-green-100 to-blue-100'}`}>
-                <span className="text-6xl">💰</span>
+            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
+              <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
+                <img src="/project_photos/flowcounts.png" alt="FlowCounts Project" className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>FlowCounts</h3>
@@ -449,18 +575,18 @@ export default function Home() {
                   <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Python</span>
                   <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>JavaScript</span>
                 </div>
-                <a href="https://github.com/carolinevarner/FlowCounts" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-800 mt-auto">
+                <a href="https://github.com/carolinevarner/FlowCounts" target="_blank" rel="noopener noreferrer" className={`project-github-button px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center mt-auto border ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white hover:bg-white hover:text-black hover:border-black'}`}>
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                  </svg>
+                    </svg>
                   GitHub
                 </a>
               </div>
             </div>
             
-            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
-              <div className={`h-48 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-purple-900/30 to-pink-900/30' : 'from-purple-100 to-pink-100'}`}>
-                <span className="text-6xl">🏪</span>
+            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
+              <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
+                <img src="/project_photos/fusionlotus.png" alt="Restaurant Simulation Project" className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Restaurant Simulation</h3>
@@ -473,7 +599,7 @@ export default function Home() {
                   <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>IPC</span>
                   <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>.NET</span>
                 </div>
-                <a href="https://github.com/carolinevarner/FusionLotus_RestaurantSimulation" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-800 mt-auto">
+                <a href="https://github.com/carolinevarner/FusionLotus_RestaurantSimulation" target="_blank" rel="noopener noreferrer" className={`project-github-button px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center mt-auto border ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white hover:bg-white hover:text-black hover:border-black'}`}>
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
@@ -482,9 +608,9 @@ export default function Home() {
               </div>
             </div>
             
-            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'bg-gray-800 border-gray-700 shadow-white/10' : 'bg-white border-gray-200'}`}>
-              <div className={`h-48 bg-gradient-to-br flex items-center justify-center ${isDarkMode ? 'from-yellow-900/30 to-orange-900/30' : 'from-yellow-100 to-orange-100'}`}>
-                <span className="text-6xl">🤖</span>
+            <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
+              <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
+                <img src="/project_photos/aithreatmodeling.png" alt="AI Threat Modeler Project" className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>AI Threat Modeler</h3>
@@ -497,7 +623,7 @@ export default function Home() {
                   <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Security</span>
                   <span className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>Threat Modeling</span>
                 </div>
-                <a href="https://github.com/carolinevarner/ai-threat-modeler" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center hover:bg-gray-800 mt-auto">
+                <a href="https://github.com/carolinevarner/ai-threat-modeler" target="_blank" rel="noopener noreferrer" className={`project-github-button px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center mt-auto border ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white hover:bg-white hover:text-black hover:border-black'}`}>
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
@@ -509,12 +635,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className={`px-8 py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+      <section id="contact" className={`px-8 py-20 ${isDarkMode ? '' : 'bg-white'}`} style={isDarkMode ? { backgroundColor: '#181818' } : {}}>
         <div className="max-w-2xl mx-auto text-center">
           <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Connect with me</p>
           <h2 className={`text-4xl font-serif mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Get in touch</h2>
           <p className={`text-lg mb-12 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
-            I&apos;d love to hear from you! If you have any questions, comments or feedback, please use the form below.
+            I&apos;d love to hear from you! If you have any questions, comments or feedback, please use the form below or email me at <b>carolinevarner04@gmail.com</b>.
           </p>
           
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -526,7 +652,7 @@ export default function Home() {
                 onChange={handleInputChange}
                 placeholder="Enter your name" 
                 required
-                className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent ${isDarkMode ? 'border-gray-600 bg-gray-800 text-white placeholder-gray-400' : 'border-gray-400 bg-white text-gray-900 placeholder-gray-600'}`}
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent ${isDarkMode ? 'border-gray-600' : 'border-black'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}
               />
               <input 
                 type="email" 
@@ -535,7 +661,7 @@ export default function Home() {
                 onChange={handleInputChange}
                 placeholder="Enter your email" 
                 required
-                className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent ${isDarkMode ? 'border-gray-600 bg-gray-800 text-white placeholder-gray-400' : 'border-gray-400 bg-white text-gray-900 placeholder-gray-600'}`}
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent ${isDarkMode ? 'border-gray-600' : 'border-black'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}
               />
             </div>
             <textarea 
@@ -545,7 +671,7 @@ export default function Home() {
               placeholder="Enter your message" 
               rows={4}
               required
-              className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent resize-none ${isDarkMode ? 'border-gray-600 bg-gray-800 text-white placeholder-gray-400' : 'border-gray-400 bg-white text-gray-900 placeholder-gray-600'}`}
+              className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent resize-none ${isDarkMode ? 'border-gray-600' : 'border-black'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}
             ></textarea>
             
             {submitStatus === 'success' && (
@@ -564,7 +690,7 @@ export default function Home() {
               disabled={isSubmitting}
               className="submit-button"
             >
-              <span>{isSubmitting ? 'Sending...' : 'Submit now →'}</span>
+              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
             </button>
           </form>
           

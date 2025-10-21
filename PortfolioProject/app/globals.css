@@ -62,7 +62,7 @@
 }
 
 .dark-mode {
-  --background: #111827;
+  --background: #212121;
   --foreground: #f9fafb;
   --text-primary: #ffffff;
   --text-secondary: #d1d5db;
@@ -95,7 +95,6 @@ body {
   font-style: normal;
 }
 
-/* Custom component classes for easier editing */
 .greeting-text {
   font-size: 1.25rem;
   color: var(--text-primary);
@@ -190,7 +189,6 @@ body {
 }
 
 .connect-button:hover {
-  /* box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); */
 }
 
 .navigation-link {
@@ -221,12 +219,16 @@ body {
   border: 1px solid #374151;
 }
 
-[data-theme="dark"] .submit-button:hover {
-  background-color: #374151;
+.dark-mode .submit-button:hover {
+  background-color: #181818;
+  color: #ffffff;
+  border: 1.5px solid #ffffff;
 }
 
 .submit-button:hover {
-  opacity: 0.9;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1.5px solid rgba(0, 0, 0, 0.5);
 }
 
 .submit-button:disabled {
@@ -241,7 +243,13 @@ body {
 }
 
 .moon-icon:hover {
-  opacity: 0.7;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+[data-theme="dark"] .moon-icon:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .connect-button-outline {
@@ -259,11 +267,57 @@ body {
 }
 
 .connect-button-outline:hover {
-  background-color: var(--connect-border);
-  color: var(--button-primary-bg);
+  background-color: #000000;
+  color: #ffffff;
 }
 
-/* Custom scrollbar */
+[data-theme="light"] .connect-button-outline:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* .dark-mode .connect-button-outline {
+  background-color: #ffffff;
+  color: #000000;
+  border: 0.5px solid #ffffff;
+} */
+
+.dark-mode .connect-button-outline:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 0.5px solid #ffffff !important;
+}
+
+.dark-mode .my-resume-button:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+
+.dark-mode .video-demo-button:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+
+.dark-mode .project-github-button:hover {
+  background-color: #2e343d !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+}
+
+.dark-mode .header-github-button:hover {
+  background-color: #181818 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+}
+
+.dark-mode .header-linkedin-button:hover {
+  background-color: #181818 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
