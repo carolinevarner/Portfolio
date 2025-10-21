@@ -335,7 +335,7 @@ body {
   background: #a8a8a8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .greeting-text {
     font-size: 1rem;
   }
@@ -348,5 +348,17 @@ body {
   .hero-description {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+  
+  .navigation-pill {
+    display: none !important;
+  }
+  
+  .moon-icon {
+    display: none !important;
+  }
+  
+  .connect-button-outline {
+    display: none !important;
   }
 }
