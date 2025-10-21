@@ -89,7 +89,7 @@ export default function Home() {
             <div className="w-2 h-2 bg-red-500 rounded-full"></div>
           </div>
           
-          <nav className="navigation-pill hidden md:block">
+          <nav className="navigation-pill hidden sm:block">
             <div className="flex items-center space-x-8">
               <a href="#home" className="navigation-link">Home</a>
               <a href="#about" className="navigation-link">About</a>
@@ -101,7 +101,7 @@ export default function Home() {
           </nav>
           
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <button onClick={toggleDarkMode} className="moon-icon hidden md:block">
+            <button onClick={toggleDarkMode} className="moon-icon hidden sm:block">
               {isDarkMode ? (
                 <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" strokeWidth={0.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -112,12 +112,12 @@ export default function Home() {
                 </svg>
               )}
             </button>
-            <a href="#contact" className="connect-button-outline hidden md:block">
+            <a href="#contact" className="connect-button-outline hidden sm:block">
               <span>Connect</span>
             </a>
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg transition-colors duration-300"
+              className="sm:hidden p-2 rounded-lg transition-colors duration-300"
               style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
         
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 p-4 rounded-lg" style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
+          <div className="sm:hidden mt-4 p-4 rounded-lg" style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
             <div className="flex flex-col space-y-3">
               <a href="#home" className="navigation-link text-center py-2" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
               <a href="#about" className="navigation-link text-center py-2" onClick={() => setIsMobileMenuOpen(false)}>About</a>
