@@ -334,3 +334,19 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+@media (max-width: 768px) {
+  .greeting-text {
+    font-size: 1rem;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
