@@ -566,7 +566,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
               <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
-                <img src="/project_photos/manageme.io.png" alt="ManageMe.io Project" className="w-full h-full object-cover" />
+                <Image src="/project_photos/manageme.io.png" alt="ManageMe.io Project" width={384} height={192} className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>SPM Project Management</h3>
@@ -598,7 +598,7 @@ export default function Home() {
             
             <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
               <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
-                <img src="/project_photos/flowcounts.png" alt="FlowCounts Project" className="w-full h-full object-cover" />
+                <Image src="/project_photos/flowcounts.png" alt="FlowCounts Project" width={384} height={192} className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>FlowCounts</h3>
@@ -622,7 +622,7 @@ export default function Home() {
             
             <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
               <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
-                <img src="/project_photos/fusionlotus.png" alt="Restaurant Simulation Project" className="w-full h-full object-cover" />
+                <Image src="/project_photos/fusionlotus.png" alt="Restaurant Simulation Project" width={384} height={192} className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Restaurant Simulation</h3>
@@ -646,7 +646,7 @@ export default function Home() {
             
             <div className={`rounded-xl shadow-lg border hover:shadow-xl transition-shadow flex flex-col h-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`} style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
               <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
-                <img src="/project_photos/aithreatmodeling.png" alt="AI Threat Modeler Project" className="w-full h-full object-cover" />
+                <Image src="/project_photos/aithreatmodeling.png" alt="AI Threat Modeler Project" width={384} height={192} className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>AI Threat Modeler</h3>
