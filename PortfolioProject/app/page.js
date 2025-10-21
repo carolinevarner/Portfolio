@@ -89,7 +89,7 @@ export default function Home() {
             <div className="w-2 h-2 bg-red-500 rounded-full"></div>
           </div>
           
-          <nav className="navigation-pill hidden md:block">
+          <nav className="navigation-pill hidden lg:block">
             <div className="flex items-center space-x-8">
               <a href="#home" className="navigation-link">Home</a>
               <a href="#about" className="navigation-link">About</a>
@@ -101,7 +101,7 @@ export default function Home() {
           </nav>
           
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <button onClick={toggleDarkMode} className="moon-icon">
+            <button onClick={toggleDarkMode} className="moon-icon hidden lg:block">
               {isDarkMode ? (
                 <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" strokeWidth={0.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -112,12 +112,12 @@ export default function Home() {
                 </svg>
               )}
             </button>
-            <a href="#contact" className="connect-button-outline hidden sm:block">
+            <a href="#contact" className="connect-button-outline hidden lg:block">
               <span>Connect</span>
             </a>
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg transition-colors duration-300"
+              className="lg:hidden p-2 rounded-lg transition-colors duration-300"
               style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
         
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 p-4 rounded-lg" style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
+          <div className="lg:hidden mt-4 p-4 rounded-lg" style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--nav-text)' }}>
             <div className="flex flex-col space-y-3">
               <a href="#home" className="navigation-link text-center py-2" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
               <a href="#about" className="navigation-link text-center py-2" onClick={() => setIsMobileMenuOpen(false)}>About</a>
@@ -136,7 +136,14 @@ export default function Home() {
               <a href="#experience" className="navigation-link text-center py-2" onClick={() => setIsMobileMenuOpen(false)}>Experience</a>
               <a href="#work" className="navigation-link text-center py-2" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
               <a href="#contact" className="navigation-link text-center py-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
-              <div className="pt-2">
+              <div className="pt-2 flex flex-col space-y-2">
+                <button onClick={toggleDarkMode} className="moon-icon w-full text-center py-2">
+                  {isDarkMode ? (
+                    <span>☀️ Light Mode</span>
+                  ) : (
+                    <span>🌙 Dark Mode</span>
+                  )}
+                </button>
                 <a href="#contact" className="connect-button-outline w-full text-center block" onClick={() => setIsMobileMenuOpen(false)}>
                   <span>Connect</span>
                 </a>
