@@ -53,25 +53,26 @@ export default function Home() {
     setSubmitStatus('');
 
     try {
-      const emailjs = (await import('@emailjs/browser')).default;
-      
-      emailjs.init("YOUR_PUBLIC_KEY");
-      
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-        to_email: 'carolinevarner04@gmail.com'
-      };
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
 
-      await emailjs.send(
-        'service_kxm8bju',
-        'YOUR_TEMPLATE_ID',
-        templateParams
-      );
-
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        const errorData = await response.json();
+        console.error('Server error:', errorData);
+        setSubmitStatus('error');
+      }
     } catch (error) {
       console.error('Error sending email:', error);
       setSubmitStatus('error');
