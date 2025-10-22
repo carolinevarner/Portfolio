@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with Next.js 15 and Tailwind CSS, s
 
 ## 🌐 Live Website
 
-**Visit my portfolio:** [cvarner.me](https://www.cvarner.me)
+**Visit my portfolio:** [www.cvarner.me](https://www.cvarner.me)
 
 ## 🚀 Features
 
