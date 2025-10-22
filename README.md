@@ -50,9 +50,7 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
