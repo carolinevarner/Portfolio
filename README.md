@@ -55,7 +55,7 @@ npm run dev
 ## 📞 Contact
 
 **Caroline Varner**
-- Portfolio: [cvarner.me](https://www.cvarner.me)
+- Portfolio: [www.cvarner.me](https://www.cvarner.me)
 - Email: [varner4262@gmail.com]
 - LinkedIn: [Caroline Varner](https://www.linkedin.com/in/caroline-varner/)
 
