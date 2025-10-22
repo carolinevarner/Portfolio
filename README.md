@@ -57,6 +57,6 @@ npm run dev
 **Caroline Varner**
 - Portfolio: [cvarner.me](https://www.cvarner.me)
 - Email: [varner4262@gmail.com]
-- LinkedIn: [https://www.linkedin.com/in/caroline-varner/]
+- LinkedIn: [Caroline Varner](https://www.linkedin.com/in/caroline-varner/)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
