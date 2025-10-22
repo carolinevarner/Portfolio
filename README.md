@@ -23,16 +23,6 @@ The website is fully responsive and optimized for:
 - Tablet (768px - 1023px)
 - Mobile (320px - 767px)
 
-## 🚀 Features
-
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **Modern UI**: Clean, professional design with smooth animations
-- **Contact Form**: Integrated email functionality using EmailJS
-- **Project Showcase**: Interactive gallery of my work and projects
-- **About Section**: Personal information and professional background
-- **Resume Download**: Direct access to my resume
-- **Fast Performance**: Built with Next.js for optimal speed and SEO
-
 ## 🚀 Getting Started
 
 ### Prerequisites
