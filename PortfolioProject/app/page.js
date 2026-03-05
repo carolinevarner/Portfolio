@@ -174,14 +174,14 @@ export default function Home() {
           
           <div className="mb-6 sm:mb-8">
             <h1 className="main-title">
-              software engineering student<br />
+              software engineer<br />
               based in atlanta, georgia.
             </h1>
           </div>
           
           <div className="mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
             <p className="hero-description">
-              I am a Software Engineering student at Kennesaw State University with an Interactive Design minor. Graduating December 2025, I&apos;m seeking a full-time position to gain experience in the field and contribute to innovative projects.
+              I am a Software Engineering graduate from Kennesaw State University with a minor in Interactive Design. I am seeking a full-time software engineering role where I can leverage my experience in full-stack development, AI-integrated tools, and scalable systems to contribute to impactful projects.
             </p>
           </div>
           
@@ -262,14 +262,11 @@ export default function Home() {
             <div className="space-y-4 sm:space-y-6 px-4 sm:px-0">
               <p className={`text-base sm:text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                 {/* Originally from Savannah, Georgia, I&apos;m a passionate Software Engineering student at Kennesaw State University with an Interactive Design minor. When I&apos;m not coding, you&apos;ll find me hiking through Georgia&apos;s beautiful trails, creating art, catching live music at concerts, or hanging out with friends. I believe that the best solutions come from combining creativity with innovative code. */}
-                I’m a Software Engineering student at Kennesaw State University, also pursuing a minor in Interactive Design. Originally from Savannah, Georgia, I’ve always been drawn to the intersection of creativity and technology—whether I’m writing code, designing user-focused solutions, or sketching new ideas.
-                When I’m not working on projects, you can usually find me hiking Georgia’s trails, making art, enjoying live music, or spending time with friends.                
-                <br></br>
+                I’m a Software Engineering graduate from Kennesaw State University with a minor in Interactive Design. Originally from Savannah, Georgia, I’ve always been drawn to the intersection of creativity and technology—whether I’m writing code, designing user-focused solutions, or sketching new ideas. When I’m not working on projects, you can usually find me hiking, making art, enjoying live music, or spending time with friends.
                 <br></br>
                 {/* When I’m not working on projects, you can usually find me hiking Georgia’s trails, making art, enjoying live music, or spending time with friends. */}
-                I believe great software comes from both innovation and collaboration, and I’m passionate about building things that are not only functional but meaningful.
-                I enjoy solving complex problems with clean, thoughtful code and a creative mindset. Whether it’s developing user-centered applications or exploring new technologies, I’m always eager to learn, grow, and turn ideas into something real.              
-              </p>
+                I believe great software comes from both innovation and collaboration, and I’m passionate about building solutions that are not only functional but meaningful. I enjoy solving complex problems with clean, thoughtful code and a creative mindset. I’m currently seeking opportunities where I can contribute to impactful projects, continue learning new technologies, and grow as a software engineer.<br></br>
+                </p>
               
             </div>
           </div>
